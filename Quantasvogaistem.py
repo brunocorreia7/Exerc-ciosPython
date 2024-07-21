@@ -1,6 +1,4 @@
 def contar_vogais(string):
-   
-    
     vogais = "aeiouAEIOU"
     contador = 0
     for p in string:
@@ -8,6 +6,14 @@ def contar_vogais(string):
             contador += 1
     return contador
 
-string = input("Digite uma palavra: ")
+while True:
+    try:
+        string = input("Digite uma palavra: ")
+        if not string.isalpha():
+            raise ValueError("Por favor, digite apenas letras.")
+        break
+    except ValueError as ve:
+        print(ve)
+
 numero_vogais = contar_vogais(string)
-print(f"essa palavra contém {numero_vogais} vogais.")
+print(f"Essa palavra contém {numero_vogais} vogais.")
