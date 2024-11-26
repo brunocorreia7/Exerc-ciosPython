@@ -6,4 +6,4 @@ def escreva(msg):
     
 escreva('bruno correia')
 escreva('exercicio de python')
-escreva('oi')
+escreva('oi, essa é a função parecida com o print')
